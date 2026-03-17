@@ -1,0 +1,15 @@
+I = imread('lena.jpg');
+J = autoContrast(I);
+h1 = histogram(I);
+h2 = histogram(J);
+subplot(2, 2, 1); 
+imshow(rgb2gray(I)); 
+hold on;
+subplot(2, 2, 2);
+imshow(h1);
+hold on;
+subplot(2, 2, 3);
+bar(J);
+hold on;
+subplot(2, 2, 4); 
+bar(h2);
